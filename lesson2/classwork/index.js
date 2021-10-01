@@ -1,5 +1,5 @@
 console.log("hello, i node");
 
-const name = "alex";
+const userName = "alex";
 
-console.log(name);
+console.log(userName);
