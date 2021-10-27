@@ -165,7 +165,7 @@
 
 /* 16. Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее). */
 
-// let num = 111555;
+// let num = 123456789012345;
 // function getDigitSum(num) {
 //   num = num.toString();
 //   let sum = 0;
@@ -178,3 +178,40 @@
 //   num = getDigitSum(num);
 // }
 // console.log(getDigitSum(num));
+
+// const evenNine = (num) => {
+//   num = `${num}`;
+//   let sum = 0;
+//   for (let i = 0; i < num.length; i++) {
+//     sum += +num[i];
+//   }
+
+//   if (sum > 9) {
+//     return evenNine(sum);
+//   } else {
+//     return sum;
+//   }
+// };
+
+// console.log(evenNine(2439));
+
+let arr = [1, 48, 3, 11, -7, 8, 6];
+
+const arrSort = (arr) => {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!i) {
+      result[i] = arr[i];
+      continue;
+    }
+    if (arr[i] > result[i - 1]) {
+      result[i] = arr[i];
+    } else {
+      const a = result[i - 1];
+      result[i - 1] = arr[i];
+      result[i] = a;
+    }
+  }
+  console.log(result);
+};
+console.log(arrSort(arr));
