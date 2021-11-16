@@ -211,3 +211,100 @@
 // city.setSomeValue("population", "15 mln");
 
 // console.log(city);
+
+// function sayFullName(firstName, lastName) {
+//   return `${this.phrase} ${firstName} ${lastName}`;
+// }
+
+// console.log(sayFullName("Alex", "Shirokov"));
+
+// console.log(sayFullName.call({ phrase: "Hello!" }));
+
+// let boundFullName = sayFullName.bind({ phrase: "Bye!!" }, "Max", "Petrov");
+
+// let sayHelloKate = sayFullName.bind({ phrase: "Hello!!!" }, "Kate");
+// console.log(sayHelloKate("Petrova"));
+// console.log(sayHelloKate("Ivanova"));
+
+//?
+
+// const city = {
+//   name: "Brasilia",
+//   population: "18 mln",
+//   getName: function () {
+//     return this.name;
+//   },
+//   getPopulation: function () {
+//     return this.population;
+//   },
+//   setSomeValue: function (key, value) {
+//     this[key] = value;
+//   },
+// };
+
+// const city2 = {
+//   name: "Rio-de-Janeiro",
+//   population: "25 mln",
+// };
+
+// console.log(city.getName.call(city2));
+// console.log(city.getPopulation.call(city2));
+// console.log(city2);
+
+// let bound = city.setSomeValue.bind(city2);
+// bound("population", "20 mln");
+// bound("country", "Brasil");
+// console.log(city2);
+
+/* let a = 0;
+console.log(a);
+
+const test = () => {
+  a = 10;
+};
+
+test();
+console.log(a); */
+
+// function getFullName() {
+//   const firstName = "Alex";
+
+//   function getSecondName(secondName) {
+//     return `${firstName} ${secondName}`;
+//   }
+
+//   return getSecondName;
+// }
+
+// const clouser = getFullName();
+// console.log(clouser("Smirnov"));
+
+// const getArea = (a) => {
+//   return (b) => a * b;
+// };
+
+// const areaWithTen = getArea(10);
+// console.log(areaWithTen(5));
+// console.log(areaWithTen(10));
+// console.log(areaWithTen(230));
+
+// const areaWithFour = getArea(4);
+// console.log(areaWithFour(3));
+// console.log(areaWithFour(21));
+
+// const getVolume = (a) => {
+//   return (b, c) => a * b * c;
+// };
+
+// const volumeWithTen = getVolume(10);
+
+// console.log(volumeWithTen(10, 10));
+
+// const getVolume = () => {
+//   const a = 10;
+//   return (b, c) => a * b * c;
+// };
+
+// const volumeWithTen = getVolume();
+
+// console.log(volumeWithTen(10, 10));
