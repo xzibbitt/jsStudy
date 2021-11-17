@@ -110,3 +110,90 @@
 // firstCard.setFromValue("Max");
 // console.log(firstCard);
 // firstCard.show();
+
+//* Class
+
+// class Parent {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   sayName() {
+//     return `Привет, мое имя ${this.name}`;
+//   }
+// }
+
+// const firstParent = new Parent("max");
+// console.log(firstParent);
+// console.log((firstParent.sayName()));
+
+// class Child extends Parent {
+//   constructor(name, lastName) {
+//     super(name);
+//     this.lastName = lastName;
+//   }
+
+//   sayName() {
+//     console.log("Это внутренний метод");
+//   }
+
+//   sayFullName() {
+//     const nameString = `${super.sayName()} ${this.lastName}`;
+//     return nameString;
+//   }
+
+//   get lastName() {
+//     return this._lastName;
+//   }
+
+//   set lastName(newValue) {
+//     this._lastName;
+//   }
+//   getLastName(newValue) {
+//     return this.lastName;
+//   }
+
+//   setLastName(newValue) {
+//     this.lastName = newValue;
+//   }
+// }
+// const firstChild = new Child("ivan", "Petrov");
+// console.log(firstChild);
+// console.log(firstChild.sayFullName());
+// console.log(firstChild.sayName());
+// firstChild.sayName();
+
+// console.log(firstChild.getLastName());
+
+// console.log(firstChild.lastName);
+
+class People {
+  constructor(name, surname) {
+    this.name = name;
+    this.surname = surname;
+  }
+  getFullName() {
+    return `ФИО: ${this.name} ${this.surname}`;
+  }
+}
+
+const firstPeople = new People("Vladimir", "Putin");
+console.log(firstPeople.getFullName());
+
+class Worker extends People {
+  constructor(name, surname, rate, day) {
+    super(name, surname);
+    this.rate = rate;
+    this.day = day;
+  }
+  getSalary() {
+    return `${this.getFullName()}, Зарплата: ${this.day * this.rate} рублей`;
+  }
+}
+
+const firstWorker = new Worker("Semen", "Popov", 2000, 20);
+
+console.log(firstWorker.getSalary());
+
+const secondWorker = new Worker("Igor", "Zverev", 3100, 20);
+console.log(secondWorker.getSalary());
