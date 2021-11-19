@@ -197,3 +197,4 @@ console.log(firstWorker.getSalary());
 
 const secondWorker = new Worker("Igor", "Zverev", 3100, 20);
 console.log(secondWorker.getSalary());
+console.log(secondWorker.getFullName());
